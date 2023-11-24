@@ -1,14 +1,14 @@
 import { Component } from 'react';
 
 import Navbar from './navbar';
-import Hero from './hero';
+import Main from '../pages/main';
 
 class App extends Component {
     render() {
         return (
             <>
                 {/* <Navbar /> */}
-                <Hero height='640px'/>
+                <Main />
             </>
         )
     }

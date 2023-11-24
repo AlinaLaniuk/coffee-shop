@@ -1,23 +1,8 @@
 import { Component } from 'react';
 
-import { Text, BoldText } from '../styledComponents/text';
-import { AbsoluteBlock, Block, VerticalSeparator } from '../styledComponents/block';
+import { BoldText } from '../styledComponents/text';
+import { AbsoluteBlock, Block } from '../styledComponents/block';
 import { Image } from '../styledComponents/image';
-import { EmptyButton } from '../styledComponents/buttons';
-
-import Beans from './beans';
-
-const mainHeroContent = <>
-    <VerticalSeparator height='20px' />
-    <Beans color='white' />
-    <VerticalSeparator height='35px' />
-    <BoldText color='white' font_size='24px'>We makes every day full of energy and taste</BoldText>
-    <VerticalSeparator height='20px' />
-    <BoldText color='white' font_size='24px'>Want to try our beans?</BoldText>
-    <VerticalSeparator height='18px' />
-    <EmptyButton><Text color='white'>More</Text></EmptyButton>
-</>
-
 class Hero extends Component {
     render() {
         return (
@@ -34,7 +19,8 @@ class Hero extends Component {
                 <Block
                     direction='column'
                 >
-                    <BoldText color='white' font_size='40px'>Everything You Love About Coffee</BoldText>
+                    <BoldText color='white' font_size='40px'>{this.props.text}</BoldText>
+                    {this.props.children}
                 </Block>
             </Block>
         )
