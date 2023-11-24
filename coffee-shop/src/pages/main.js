@@ -6,6 +6,7 @@ import { VerticalSeparator } from '../styledComponents/block';
 import Beans from '../components/beans';
 import { WhiteBoldText, Text } from '../styledComponents/text';
 import { EmptyButton } from '../styledComponents/buttons';
+import CardsList from '../components/cardsList';
 
 const mainHeroContent = <>
     <VerticalSeparator height='20px' />
@@ -26,6 +27,7 @@ class Main extends Component {
             <>
                 <Hero height='640px' text={heroText} children={mainHeroContent}/>
                 <AboutUs/>
+                <CardsList/>
             </>
         )
     }

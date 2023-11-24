@@ -14,7 +14,7 @@ class Hero extends Component {
                     z_index='-1'
                     height={this.props.height}
                 >
-                    <Image width='100%' height='100%' src='./hero-pictures/main.jpg' />
+                    <Image width='100%' height='100%' src='./bg/main.jpg' />
                 </AbsoluteBlock>
                 <Block
                     direction='column'
