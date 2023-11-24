@@ -4,9 +4,10 @@ import Hero from '../components/hero';
 import AboutUs from '../components/about-us';
 import { VerticalSeparator } from '../styledComponents/block';
 import Beans from '../components/beans';
-import { WhiteBoldText, Text } from '../styledComponents/text';
+import { WhiteBoldText } from '../styledComponents/text';
 import { EmptyButton } from '../styledComponents/buttons';
 import CardsList from '../components/cardsList';
+import Header from '../components/header';
 
 const mainHeroContent = <>
     <VerticalSeparator height='20px' />
@@ -25,6 +26,7 @@ class Main extends Component {
     render() {
         return (
             <>
+                <Header/>
                 <Hero height='640px' text={heroText} children={mainHeroContent}/>
                 <AboutUs/>
                 <CardsList/>

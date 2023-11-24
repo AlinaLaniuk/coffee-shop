@@ -27,3 +27,7 @@ export const ColoredBlock = styled(Block)`
 export const VerticalSeparator = styled(Block)`
     width: 1px;
 `;
+
+export const HorizontalSeparator = styled(Block)`
+    height: 1px;
+`;
