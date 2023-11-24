@@ -1,8 +1,8 @@
 import { Component } from 'react';
 
-import { Text } from '../../styledComponents/text';
-import { Block } from '../../styledComponents/block';
-import { Image } from '../../styledComponents/image';
+import { Text } from '../styledComponents/text';
+import { Block } from '../styledComponents/block';
+import { Image } from '../styledComponents/image';
 
 const links = [
     { text: 'Coffee house', picture: './icons/coffee-beans-empty.png' },
@@ -17,7 +17,7 @@ class Navbar extends Component {
                 return (
                     <Block
                         width='auto'
-                        alignItems='flex-end'
+                        align_items='flex-end'
                     >
                         <Image src={link.picture} alt={link.text} />
                         <Text as='a'>{link.text}</Text>
@@ -33,7 +33,7 @@ class Navbar extends Component {
             <Block
                 width='25%'
                 gap='40px'
-                alignItems='flex-end'
+                align_items='flex-end'
             >
                 {linksElements}
             </Block>
