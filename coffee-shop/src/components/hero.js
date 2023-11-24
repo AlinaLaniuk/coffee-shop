@@ -1,6 +1,6 @@
 import { Component } from 'react';
 
-import { BoldText } from '../styledComponents/text';
+import { WhiteBoldText } from '../styledComponents/text';
 import { AbsoluteBlock, Block } from '../styledComponents/block';
 import { Image } from '../styledComponents/image';
 class Hero extends Component {
@@ -19,7 +19,7 @@ class Hero extends Component {
                 <Block
                     direction='column'
                 >
-                    <BoldText color='white' font_size='40px'>{this.props.text}</BoldText>
+                    <WhiteBoldText color='white' font_size='40px'>{this.props.text}</WhiteBoldText>
                     {this.props.children}
                 </Block>
             </Block>
