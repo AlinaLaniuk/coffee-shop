@@ -11,7 +11,7 @@ class Beans extends Component {
                 width='200px'
                 gap='25px'>
                 {line}
-                <Image src='./icons/coffee-beans-fill-white.png' alt='beans' />
+                <Image src={`./icons/coffee-beans-fill-${this.props.color}.png`} alt='beans' />
                 {line}
             </Block>
         )

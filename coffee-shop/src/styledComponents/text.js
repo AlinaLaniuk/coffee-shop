@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Text = styled.span`
     font-family: 'Merienda', cursive;
     font-size: ${props => props.font_size || '12px'}; 
+    text-align: center
 `;
 
 export const BoldText = styled(Text)`
