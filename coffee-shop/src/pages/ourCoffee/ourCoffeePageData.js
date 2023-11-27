@@ -1,3 +1,5 @@
+export const heroImgSrc = './bg/our-coffee.png';
+
 export const heroText = 'Our Coffee';
 
 export const aboutUsBlockContent = {

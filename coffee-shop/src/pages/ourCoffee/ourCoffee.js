@@ -6,14 +6,14 @@ import SearchFilterPanel from '../../components/searchFilterPanel';
 import { Block, VerticalSeparator } from '../../styledComponents/block';
 import CardsList from '../../components/cardsComponents/cardsList';
 import Line from '../../components/common/line';
-import { heroText, aboutUsBlockContent, cardsData, cardType } from './ourCoffeePageData';
+import { heroImgSrc, heroText, aboutUsBlockContent, cardsData, cardType } from './ourCoffeePageData';
 
 class OurCoffee extends Component {
     render() {
         const { text, header, imgSrc, imgAlt } = aboutUsBlockContent;
         return (
             <>
-                <Hero height='260px' text={heroText} />
+                <Hero imgSrc={heroImgSrc} height='260px' text={heroText} />
                 <Block direction='column' width='60%'>
                     <AboutBlock text={text} header={header} imgSrc={imgSrc} imgAlt={imgAlt} />
                     <Line width='240px' color='black'/>

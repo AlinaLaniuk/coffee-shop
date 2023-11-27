@@ -6,16 +6,17 @@ import { Image } from '../styledComponents/image';
 
 class Hero extends Component {
     render() {
+        const {height, imgSrc} = this.props;
         return (
             <Block
-                height={this.props.height}
+                height={height}
                 direction='column'
             >
                 <AbsoluteBlock
                     z_index='-1'
                     height={this.props.height}
                 >
-                    <Image width='100%' height='100%' src='./bg/main.jpg' />
+                    <Image width='100%' height='100%' src={imgSrc} />
                 </AbsoluteBlock>
                 <Block
                     direction='column'
