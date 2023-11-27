@@ -4,7 +4,7 @@ import Hero from '../components/hero';
 import AboutBlock from '../components/about-block';
 import SearchFilterPanel from '../components/searchFilterPanel';
 import { Block, VerticalSeparator } from '../styledComponents/block';
-import Line from '../components/line';
+import Line from '../components/common/line';
 
 const heroText = 'Our Coffee';
 

@@ -1,6 +1,6 @@
 import { Component } from 'react';
 
-import { ColoredBlock } from '../styledComponents/block';
+import { ColoredBlock } from '../../styledComponents/block';
 
 class Line extends Component {
     render() {

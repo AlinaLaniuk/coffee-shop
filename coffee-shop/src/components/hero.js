@@ -3,7 +3,7 @@ import { Component } from 'react';
 import { WhiteBoldText } from '../styledComponents/text';
 import { AbsoluteBlock, Block } from '../styledComponents/block';
 import { Image } from '../styledComponents/image';
-import ImageBlock from './imageBlock';
+
 class Hero extends Component {
     render() {
         return (

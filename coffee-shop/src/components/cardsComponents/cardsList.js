@@ -1,9 +1,9 @@
 import { Component } from 'react';
 
-import { AbsoluteBlock, Block } from '../styledComponents/block';
-import { BlackRegularText } from '../styledComponents/text';
-import { Image } from '../styledComponents/image';
-import { VerticalSeparator } from '../styledComponents/block';
+import { AbsoluteBlock, Block } from '../../styledComponents/block';
+import { BlackRegularText } from '../../styledComponents/text';
+import { Image } from '../../styledComponents/image';
+import { VerticalSeparator } from '../../styledComponents/block';
 import Card from './card';
 
 const cardsData = [

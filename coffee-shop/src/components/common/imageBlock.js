@@ -1,7 +1,7 @@
 import { Component } from 'react';
 
-import { Image } from '../styledComponents/image';
-import { Block } from '../styledComponents/block';
+import { Image } from '../../styledComponents/image';
+import { Block } from '../../styledComponents/block';
 
 class ImageBlock extends Component {
     render() {

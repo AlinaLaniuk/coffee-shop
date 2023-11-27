@@ -1,8 +1,8 @@
 import { Component } from 'react';
 
-import { Text } from '../styledComponents/text';
-import { Block } from '../styledComponents/block';
-import { Image } from '../styledComponents/image';
+import { Text } from '../../styledComponents/text';
+import { Block } from '../../styledComponents/block';
+import { Image } from '../../styledComponents/image';
 
 class Navbar extends Component {
     render() {

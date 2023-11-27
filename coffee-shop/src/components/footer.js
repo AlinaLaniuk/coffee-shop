@@ -1,7 +1,7 @@
 import { Component } from 'react';
-import Navbar from './navbar';
+import Navbar from './common/navbar';
 import { Block } from '../styledComponents/block';
-import Beans from './beans';
+import Beans from './common/beans';
 import { VerticalSeparator } from '../styledComponents/block';
 
 class Footer extends Component {

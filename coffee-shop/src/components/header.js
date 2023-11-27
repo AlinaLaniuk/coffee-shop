@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import Navbar from './navbar';
+import Navbar from './common/navbar';
 import { AbsoluteBlock } from '../styledComponents/block';
 import { HorizontalSeparator } from '../styledComponents/block';
 

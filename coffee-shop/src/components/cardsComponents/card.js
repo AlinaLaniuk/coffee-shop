@@ -1,9 +1,9 @@
 import { Component } from 'react';
 
-import { Block, ColoredBlock } from '../styledComponents/block';
-import { Image } from '../styledComponents/image';
-import { BlackRegularText, BlackBoldText } from '../styledComponents/text';
-import { VerticalSeparator } from '../styledComponents/block';
+import { Block, ColoredBlock } from '../../styledComponents/block';
+import { Image } from '../../styledComponents/image';
+import { BlackRegularText, BlackBoldText } from '../../styledComponents/text';
+import { VerticalSeparator } from '../../styledComponents/block';
 
 class Card extends Component {
     render() {

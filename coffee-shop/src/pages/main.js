@@ -3,10 +3,10 @@ import { Component } from 'react';
 import Hero from '../components/hero';
 import AboutBlock from '../components/about-block';
 import { VerticalSeparator } from '../styledComponents/block';
-import Beans from '../components/beans';
+import Beans from '../components/common/beans';
 import { WhiteBoldText } from '../styledComponents/text';
 import { EmptyButton } from '../styledComponents/buttons';
-import CardsList from '../components/cardsList';
+import CardsList from '../components/cardsComponents/cardsList';
 
 const mainHeroContent = <>
     <VerticalSeparator height='20px' />

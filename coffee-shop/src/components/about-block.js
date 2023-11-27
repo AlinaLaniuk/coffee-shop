@@ -4,8 +4,8 @@ import { BlackRegularText } from '../styledComponents/text';
 import { Block } from '../styledComponents/block';
 import { VerticalSeparator } from '../styledComponents/block';
 import { HorizontalSeparator } from '../styledComponents/block';
-import ImageBlock from './imageBlock';
-import Beans from './beans';
+import ImageBlock from './common/imageBlock';
+import Beans from './common/beans';
 
 class AboutBlock extends Component {
     render() {

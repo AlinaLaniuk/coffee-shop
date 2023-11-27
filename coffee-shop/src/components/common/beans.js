@@ -1,7 +1,7 @@
 import { Component } from 'react';
 
-import { Block, ColoredBlock } from '../styledComponents/block';
-import { Image } from '../styledComponents/image';
+import { Block, ColoredBlock } from '../../styledComponents/block';
+import { Image } from '../../styledComponents/image';
 import Line from './line';
 
 class Beans extends Component {
