@@ -1,7 +1,7 @@
 import { Component } from 'react';
 
 import Main from '../pages/main/main';
-import OurCoffee from '../pages/ourCoffee';
+import OurCoffee from '../pages/ourCoffee/ourCoffee';
 import CommonLayout from './commonLayout';
 import { Block } from '../styledComponents/block';
 
