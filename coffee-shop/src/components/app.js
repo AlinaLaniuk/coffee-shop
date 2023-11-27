@@ -3,6 +3,7 @@ import { Component } from 'react';
 import Main from '../pages/main/main';
 import OurCoffee from '../pages/ourCoffee/ourCoffee';
 import ProductPage from '../pages/productPage/productPage';
+import ForYourPleasure from '../pages/forYourPleasure.js/forYourPleasure';
 import CommonLayout from './commonLayout';
 import { Block } from '../styledComponents/block';
 import { BlackBoldText } from '../styledComponents/text';
@@ -24,7 +25,7 @@ class App extends Component {
                 direction='column'
             >
                 <CommonLayout>
-                    <ProductPage productInfo={productInfo}/>
+                    <ForYourPleasure/>
                 </CommonLayout>
             </Block>
         )
