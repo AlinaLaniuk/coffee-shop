@@ -29,9 +29,8 @@ class AboutBlock extends Component {
             <Block
                 height='520px'
             >
-                {imgSrc && <ImageBlock src={imgSrc} alt={imgAlt} />}
-                <HorizontalSeparator width='50px' />
-                <Block width='auto' direction='column'>
+                {imgSrc && <><ImageBlock src={imgSrc} alt={imgAlt} /><HorizontalSeparator width='50px' /></>}
+                <Block width={imgSrc ? 'auto' : '40%'} direction='column'>
                     <BlackRegularText font_size='24px'>{header}</BlackRegularText>
                     <VerticalSeparator height='20px' />
                     <Beans color='black' />

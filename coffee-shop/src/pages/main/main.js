@@ -1,16 +1,17 @@
 import { Component } from 'react';
 
-import Hero from '../components/hero';
-import AboutBlock from '../components/about-block';
-import { VerticalSeparator } from '../styledComponents/block';
-import Beans from '../components/common/beans';
-import { WhiteBoldText } from '../styledComponents/text';
-import { EmptyButton } from '../styledComponents/buttons';
-import CardsList from '../components/cardsComponents/cardsList';
-import { AbsoluteBlock } from '../styledComponents/block';
-import { Image } from '../styledComponents/image';
-import { Block } from '../styledComponents/block';
-import { BlackRegularText } from '../styledComponents/text';
+import Hero from '../../components/hero';
+import AboutBlock from '../../components/about-block';
+import { VerticalSeparator } from '../../styledComponents/block';
+import Beans from '../../components/common/beans';
+import { WhiteBoldText } from '../../styledComponents/text';
+import { EmptyButton } from '../../styledComponents/buttons';
+import CardsList from '../../components/cardsComponents/cardsList';
+import { AbsoluteBlock } from '../../styledComponents/block';
+import { Image } from '../../styledComponents/image';
+import { Block } from '../../styledComponents/block';
+import { BlackRegularText } from '../../styledComponents/text';
+import OurBestBlock from './ourBesrBlock';
 
 const mainHeroContent = <>
     <VerticalSeparator height='20px' />
@@ -30,7 +31,6 @@ const aboutUsBlockContent = {
     header: 'About us',
     imgSrc: '',
     imgAlt: '',
-    height: '520px'
 };
 
 
@@ -43,21 +43,12 @@ const cardsData = [
 const cardType = 'transparentBG';
 class Main extends Component {
     render() {
+        const { text, header, imgSrc, imgAlt } = aboutUsBlockContent;
         return (
             <>
                 <Hero height='640px' text={heroText} children={mainHeroContent} />
-                <AboutBlock props={aboutUsBlockContent} />
-                <Block>
-                    <AbsoluteBlock
-                        top='0'
-                        z_index='-1'
-                    >
-                        <Image width='100%' src='./bg/paper-bg.png' />
-                    </AbsoluteBlock>
-                    <BlackRegularText font_size='24px'>Our best</BlackRegularText>
-                    <VerticalSeparator height='39px' />
-                    <CardsList cardsData={cardsData} cardType={cardType} />
-                </Block>
+                <AboutBlock text={text} header={header} imgSrc={imgSrc} imgAlt={imgAlt} />
+                <OurBestBlock cardsData={cardsData} cardType={cardType}/>
             </>
         )
     }
