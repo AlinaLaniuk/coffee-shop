@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Block = styled.div`
     width: ${props => props.width || '100%'};
     height: ${props => props.height || 'auto'};
-    display: flex;
+    display: ${props => props.display || 'flex'};
     position: relative;
     flex-direction: ${props => props.direction || 'row'};
     justify-content: ${props => props.justify_content || 'center'};
