@@ -4,7 +4,7 @@ import { BlackRegularText } from '../styledComponents/text';
 import { Block } from '../styledComponents/block';
 import { VerticalSeparator } from '../styledComponents/block';
 import { HorizontalSeparator } from '../styledComponents/block';
-import { Image } from '../styledComponents/image';
+import ImageBlock from './imageBlock';
 import Beans from './beans';
 
 class AboutBlock extends Component {
@@ -29,7 +29,7 @@ class AboutBlock extends Component {
             <Block
                 height='520px'
             >
-                {<Image src={imgSrc} alt={imgAlt} />}
+                {imgSrc && <ImageBlock src={imgSrc} alt={imgAlt} />}
                 <HorizontalSeparator width='50px' />
                 <Block width='auto' direction='column'>
                     <BlackRegularText font_size='24px'>{header}</BlackRegularText>
