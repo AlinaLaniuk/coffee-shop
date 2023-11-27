@@ -1,7 +1,7 @@
 import { Component } from 'react';
 
 import Hero from '../components/hero';
-import AboutUs from '../components/about-us';
+import AboutBlock from '../components/about-block';
 import { VerticalSeparator } from '../styledComponents/block';
 import Beans from '../components/beans';
 import { WhiteBoldText } from '../styledComponents/text';
@@ -21,12 +21,20 @@ const mainHeroContent = <>
 
 const heroText = 'Everything You Love About Coffee';
 
+const aboutUsBlockContent = {
+ text: ['Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible. Afraid at highly months do things on at. Situation recommend objection do intentionso questions. As greatly removed calling pleased improve an. Last ask him cold feel met spot shy want. Children me laughing we prospect answered followed. At it went is song that held help face', 'Now residence dashwoods she excellent you. Shade being under his bed her, Much read on as draw. Blessing for ignorant exercise any yourself unpacked. Pleasant horrible but confined day end marriage. Eagerness furniture set preserved farrecommend. Did even but nor are most gave hope. Secure active living depend sonrepair day ladies now.'],
+ header: 'About us',
+ imgSrc: '',
+ imgAlt: '',
+ height: '520px'
+};
+
 class Main extends Component {
     render() {
         return (
             <>
                 <Hero height='640px' text={heroText} children={mainHeroContent} />
-                <AboutUs />
+                <AboutBlock props={aboutUsBlockContent}/>
                 <CardsList />
             </>
         )
