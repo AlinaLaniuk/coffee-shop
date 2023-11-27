@@ -4,6 +4,7 @@ import Hero from '../components/hero';
 import AboutBlock from '../components/about-block';
 import SearchFilterPanel from '../components/searchFilterPanel';
 import { Block, VerticalSeparator } from '../styledComponents/block';
+import CardsList from '../components/cardsComponents/cardsList';
 import Line from '../components/common/line';
 
 const heroText = 'Our Coffee';
@@ -14,6 +15,17 @@ const aboutUsBlockContent = {
     imgSrc: './articles-pictures/girl-with-cup.png',
     imgAlt: 'girl with cup',
 };
+
+const cardsData = [
+    { src: './cards-pictures/1.png', name: 'AROMISTICO Coffee 1 kg', price: 10.73, country: 'Brazil' },
+    { src: './cards-pictures/2.png', name: 'AROMISTICO Coffee 1 kg', price: 15.99, country: 'Columbia' },
+    { src: './cards-pictures/3.png', name: 'AROMISTICO Coffee 1 kg', price: 6.99, country: 'Kenya' },
+    { src: './cards-pictures/1.png', name: 'AROMISTICO Coffee 1 kg', price: 10.73, country: 'Columbia' },
+    { src: './cards-pictures/1.png', name: 'AROMISTICO Coffee 1 kg', price: 10.73, country: 'Kenya' },
+    { src: './cards-pictures/1.png', name: 'AROMISTICO Coffee 1 kg', price: 10.73, country: 'Brazil' },
+];
+
+const cardType = 'whiteBGShadow';
 
 class OurCoffee extends Component {
     render() {
@@ -26,6 +38,9 @@ class OurCoffee extends Component {
                     <Line width='240px' color='black'/>
                     <VerticalSeparator height='60px'/>
                     <SearchFilterPanel />
+                    <VerticalSeparator height='60px'/>
+                    <CardsList cardsData={cardsData} cardType={cardType}/>
+                    <VerticalSeparator height='60px'/>
                 </Block>
             </>
         )

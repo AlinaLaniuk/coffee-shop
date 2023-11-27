@@ -9,6 +9,7 @@ export const Block = styled.div`
     justify-content: ${props => props.justify_content || 'center'};
     align-items: ${props => props.align_items || 'center'};
     gap: ${props => props.gap};
+    flex-wrap: ${props => props.flex_wrap};
 `;
 export const AbsoluteBlock = styled(Block)`
     position: absolute;
@@ -22,6 +23,7 @@ export const AbsoluteBlock = styled(Block)`
 export const ColoredBlock = styled(Block)`
     background-color: ${props => props.background_color};
     border-radius: ${props => props.border_radius};
+    box-shadow: ${props => props.box_shadow};
 `;
 
 export const VerticalSeparator = styled(Block)`
