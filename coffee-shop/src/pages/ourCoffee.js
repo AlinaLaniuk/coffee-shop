@@ -2,7 +2,9 @@ import { Component } from 'react';
 
 import Hero from '../components/hero';
 import AboutBlock from '../components/about-block';
-import { Block } from '../styledComponents/block';
+import SearchFilterPanel from '../components/searchFilterPanel';
+import { Block, VerticalSeparator } from '../styledComponents/block';
+import Line from '../components/line';
 
 const heroText = 'Our Coffee';
 
@@ -21,6 +23,9 @@ class OurCoffee extends Component {
                 <Hero height='260px' text={heroText} />
                 <Block direction='column' width='60%'>
                     <AboutBlock text={text} header={header} imgSrc={imgSrc} imgAlt={imgAlt} />
+                    <Line width='240px' color='black'/>
+                    <VerticalSeparator height='60px'/>
+                    <SearchFilterPanel />
                 </Block>
             </>
         )

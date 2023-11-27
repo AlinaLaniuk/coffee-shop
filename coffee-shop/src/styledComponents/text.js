@@ -5,6 +5,7 @@ export const Text = styled.span`
     font-size: ${props => props.font_size || '12px'}; 
     text-align: center;
     color: ${props => props.color}; 
+    white-space: ${props => props.white_space || ''};
 `;
 
 export const BoldText = styled(Text)`
