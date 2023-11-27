@@ -7,8 +7,6 @@ import Beans from '../components/beans';
 import { WhiteBoldText } from '../styledComponents/text';
 import { EmptyButton } from '../styledComponents/buttons';
 import CardsList from '../components/cardsList';
-import Header from '../components/header';
-import Footer from '../components/footer';
 
 const mainHeroContent = <>
     <VerticalSeparator height='20px' />
@@ -27,11 +25,9 @@ class Main extends Component {
     render() {
         return (
             <>
-                <Header/>
-                <Hero height='640px' text={heroText} children={mainHeroContent}/>
-                <AboutUs/>
-                <CardsList/>
-                <Footer/>
+                <Hero height='640px' text={heroText} children={mainHeroContent} />
+                <AboutUs />
+                <CardsList />
             </>
         )
     }

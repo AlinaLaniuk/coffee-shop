@@ -1,15 +1,15 @@
 import { Component } from 'react';
 
-import Navbar from './navbar';
 import Main from '../pages/main';
+import OurCoffee from '../pages/ourCoffee';
+import CommonLayout from './commonLayout';
 
 class App extends Component {
     render() {
         return (
-            <>
-                {/* <Navbar /> */}
-                <Main />
-            </>
+            <CommonLayout>
+                <OurCoffee />
+            </CommonLayout>
         )
     }
 }
