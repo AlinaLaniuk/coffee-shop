@@ -1,4 +1,4 @@
-export const heroImgSrc = './bg/main.jpg';
+export const heroImgSrc = 'bg/main.jpg';
 
 export const heroText = 'Everything You Love About Coffee';
 

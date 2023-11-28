@@ -7,7 +7,7 @@ import { Image } from '../../styledComponents/image';
 class Navbar extends Component {
     render() {
         const links = [
-            { text: 'Coffee house', picture: `./icons/coffee-beans-empty-${this.props.color}.png`, href: '/' },
+            { text: 'Coffee house', picture: `icons/coffee-beans-empty-${this.props.color}.png`, href: '/' },
             { text: 'Our coffee', href: '/our-coffee' },
             { text: 'For your pleasure', href: '/for-your-pleasure' }
         ];
