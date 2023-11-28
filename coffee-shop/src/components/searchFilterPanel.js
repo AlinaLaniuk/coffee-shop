@@ -9,22 +9,8 @@ import { HorizontalSeparator } from '../styledComponents/block';
 const buttonsText = ['All', 'Brazil', 'Kenya', 'Columbia'];
 
 class SearchFilterPanel extends Component {
-    constructor(props) {
-        super(props);
-        this.state = { inputValue: '' };
-    }
-
-    onChange = (event) => {
-        this.setState(() => {
-            const currentInputValue = event.target.value;
-            this.props.onSearch(currentInputValue);
-            return { inputValue: currentInputValue }
-        });
-    }
-
     render() {
-        const { onFilter } = this.props;
-        const { inputValue } = this.state;
+        const { onFilter, onChange, inputValue } = this.props;
         const buttons = buttonsText.map((buttonText, index, array) => {
             if (index === (array.length - 1)) {
                 return (
@@ -45,7 +31,7 @@ class SearchFilterPanel extends Component {
                 <Block>
                     <BlackRegularText font_size='14px'>Looking for</BlackRegularText>
                     <HorizontalSeparator width='19px' />
-                    <InputWithShadow value={inputValue} onChange={this.onChange} placeholder='start typing here...' width='180px' />
+                    <InputWithShadow value={inputValue} onChange={onChange} placeholder='start typing here...' width='180px' />
                 </Block>
                 <HorizontalSeparator width='83px' />
                 <Block>

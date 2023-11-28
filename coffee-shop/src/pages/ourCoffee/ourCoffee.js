@@ -11,28 +11,40 @@ import { productsData } from '../productsData/productsData';
 class OurCoffee extends Component {
     constructor(){
         super();
-        this.state = {visualData: productsData}
+        this.state = {
+            filteredData: productsData,
+            inputValue: ''
+        }
+    }
+
+    onChange = (event) => {
+        this.setState((prevState) => {
+            const currentInputValue = event.target.value;
+            return {...prevState, inputValue: currentInputValue }
+        });
     }
 
     onFilter = (filter) => {
         if(filter === 'All'){
-            this.setState({visualData: productsData});
+            this.setState({inputValue: '', filteredData: productsData});
             return;
         }
-        const currentVisualData = productsData.filter((productInfo) => productInfo.country === filter);
-        this.setState({visualData: currentVisualData});
+        const newFilteredData = productsData.filter((productInfo) => productInfo.country === filter);
+        this.setState((prevState) => {return {...prevState, filteredData: newFilteredData}});
     }
 
-    onSearch = (value) => {
-        if(value === ''){
-            this.setState({visualData: productsData});
+    onSearch = () => {
+        const {inputValue} = this.state;
+        if(inputValue === ''){
+            return this.state.filteredData;
         }
-        const dataFitSearch = this.state.visualData.filter((productInfo) => productInfo.name.indexOf(value) > -1);
-        this.setState({visualData: dataFitSearch});
+        const dataFitSearch = this.state.filteredData.filter((productInfo) => productInfo.name.indexOf(inputValue) > -1);
+        return dataFitSearch;
     }
 
     render() {
         const { text, header, imgSrc, imgAlt } = aboutUsBlockContent;
+        const visualData = this.onSearch()
         return (
             <>
                 <Hero imgSrc={heroImgSrc} height='260px' text={heroText} />
@@ -40,9 +52,9 @@ class OurCoffee extends Component {
                     <AboutBlock text={text} header={header} imgSrc={imgSrc} imgAlt={imgAlt} />
                     <Line width='240px' color='black'/>
                     <VerticalSeparator height='60px'/>
-                    <SearchFilterPanel onSearch={this.onSearch} onFilter={this.onFilter}/>
+                    <SearchFilterPanel inputValue={this.state.inputValue} onChange={this.onChange} onFilter={this.onFilter}/>
                     <VerticalSeparator height='60px'/>
-                    <CardsList cardsData={this.state.visualData} cardType={cardType}/>
+                    <CardsList cardsData={visualData} cardType={cardType}/>
                     <VerticalSeparator height='60px'/>
                 </Block>
             </>
