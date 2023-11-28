@@ -10,15 +10,16 @@ const buttonsText = ['Brazil', 'Kenya', 'Columbia'];
 
 class SearchFilterPanel extends Component {
     render() {
+        const {onFilter} = this.props;
         const buttons = buttonsText.map((buttonText, index, array) => {
             if (index === (array.length - 1)) {
                 return (
-                    <WhiteButtonWithShadow key={buttonText + index}><BlackRegularText font_size='14px'>{buttonText}</BlackRegularText></WhiteButtonWithShadow>
+                    <WhiteButtonWithShadow onClick={() => onFilter(buttonText)} key={buttonText + index}><BlackRegularText font_size='14px'>{buttonText}</BlackRegularText></WhiteButtonWithShadow>
                 )
             }
             return (
                 <Fragment key={buttonText + index}>
-                    <WhiteButtonWithShadow><BlackRegularText font_size='14px'>{buttonText}</BlackRegularText></WhiteButtonWithShadow>
+                    <WhiteButtonWithShadow onClick={() => onFilter(buttonText)}><BlackRegularText font_size='14px'>{buttonText}</BlackRegularText></WhiteButtonWithShadow>
                     <HorizontalSeparator width='5px' />
                 </Fragment>
             )

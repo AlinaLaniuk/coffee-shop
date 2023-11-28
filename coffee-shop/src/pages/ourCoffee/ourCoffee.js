@@ -9,6 +9,16 @@ import Line from '../../components/common/line';
 import { heroImgSrc, heroText, aboutUsBlockContent, cardType } from './ourCoffeePageData';
 import { productsData } from '../productsData/productsData';
 class OurCoffee extends Component {
+    constructor(){
+        super();
+        this.state = {visualData: productsData}
+    }
+
+    onFilter = (filter) => {
+        const currentVisualData = productsData.filter((productInfo) => productInfo.country === filter);
+        this.setState({visualData: currentVisualData});
+    }
+
     render() {
         const { text, header, imgSrc, imgAlt } = aboutUsBlockContent;
         return (
@@ -18,9 +28,9 @@ class OurCoffee extends Component {
                     <AboutBlock text={text} header={header} imgSrc={imgSrc} imgAlt={imgAlt} />
                     <Line width='240px' color='black'/>
                     <VerticalSeparator height='60px'/>
-                    <SearchFilterPanel />
+                    <SearchFilterPanel onFilter={this.onFilter}/>
                     <VerticalSeparator height='60px'/>
-                    <CardsList cardsData={productsData} cardType={cardType}/>
+                    <CardsList cardsData={this.state.visualData} cardType={cardType}/>
                     <VerticalSeparator height='60px'/>
                 </Block>
             </>
