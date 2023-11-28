@@ -12,5 +12,5 @@ white-space: ${props => props.white_space || ''};
    transform: scale(1.2);
 }
 &:active{
-   color: red;
+   color: grey;
 }`;
