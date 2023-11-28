@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import { Component, Fragment } from 'react';
 
 import { Block } from '../styledComponents/block';
 import { InputWithShadow } from '../styledComponents/input';
@@ -13,14 +13,14 @@ class SearchFilterPanel extends Component {
         const buttons = buttonsText.map((buttonText, index, array) => {
             if (index === (array.length - 1)) {
                 return (
-                    <WhiteButtonWithShadow><BlackRegularText font_size='14px'>{buttonText}</BlackRegularText></WhiteButtonWithShadow>
+                    <WhiteButtonWithShadow key={buttonText + index}><BlackRegularText font_size='14px'>{buttonText}</BlackRegularText></WhiteButtonWithShadow>
                 )
             }
             return (
-                <>
+                <Fragment key={buttonText + index}>
                     <WhiteButtonWithShadow><BlackRegularText font_size='14px'>{buttonText}</BlackRegularText></WhiteButtonWithShadow>
                     <HorizontalSeparator width='5px' />
-                </>
+                </Fragment>
             )
 
         });

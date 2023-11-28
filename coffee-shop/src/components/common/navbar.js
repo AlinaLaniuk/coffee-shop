@@ -18,6 +18,7 @@ class Navbar extends Component {
                     <Block
                         width='auto'
                         align_items='flex-end'
+                        key={link.text}
                     >
                         <Image src={link.picture} alt={link.text} />
                         <NavbarLink color={this.props.color} to={link.href}>{link.text}</NavbarLink>
@@ -25,7 +26,7 @@ class Navbar extends Component {
                 )
             }
             return (
-                <NavbarLink color={this.props.color} to={link.href}>{link.text}</NavbarLink>
+                <NavbarLink key={link.text} color={this.props.color} to={link.href}>{link.text}</NavbarLink>
             )
         })
 
