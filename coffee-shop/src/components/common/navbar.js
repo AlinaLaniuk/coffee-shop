@@ -1,15 +1,15 @@
 import { Component } from 'react';
 
-import { Text } from '../../styledComponents/text';
+import { NavbarLink } from '../../styledComponents/navbarLink';
 import { Block } from '../../styledComponents/block';
 import { Image } from '../../styledComponents/image';
 
 class Navbar extends Component {
     render() {
         const links = [
-            { text: 'Coffee house', picture: `./icons/coffee-beans-empty-${this.props.color}.png` },
-            { text: 'Our coffee' },
-            { text: 'For your pleasure' }
+            { text: 'Coffee house', picture: `./icons/coffee-beans-empty-${this.props.color}.png`, href: '/' },
+            { text: 'Our coffee', href: '/our-coffee' },
+            { text: 'For your pleasure', href: '/for-your-pleasure' }
         ];
 
         const linksElements = links.map((link) => {
@@ -20,12 +20,12 @@ class Navbar extends Component {
                         align_items='flex-end'
                     >
                         <Image src={link.picture} alt={link.text} />
-                        <Text color={this.props.color} as='a'>{link.text}</Text>
+                        <NavbarLink color={this.props.color} to={link.href}>{link.text}</NavbarLink>
                     </Block>
                 )
             }
             return (
-                <Text color={this.props.color} as='a'>{link.text}</Text>
+                <NavbarLink color={this.props.color} to={link.href}>{link.text}</NavbarLink>
             )
         })
 

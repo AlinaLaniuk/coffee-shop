@@ -1,13 +1,8 @@
 import { Component } from 'react';
+import { Outlet } from 'react-router-dom';
 
-import Main from '../pages/main/main';
-import OurCoffee from '../pages/ourCoffee/ourCoffee';
-import ProductPage from '../pages/productPage/productPage';
-import ForYourPleasure from '../pages/forYourPleasure.js/forYourPleasure';
 import CommonLayout from './commonLayout';
 import { Block } from '../styledComponents/block';
-import { BlackBoldText } from '../styledComponents/text';
-
 
 // убрать после того, как будет написана логика роутинга
 const productInfo = {
@@ -25,8 +20,8 @@ class App extends Component {
                 direction='column'
             >
                 <CommonLayout>
-                    <ForYourPleasure/>
-                </CommonLayout>
+                    <Outlet />
+                </ CommonLayout>
             </Block>
         )
     }

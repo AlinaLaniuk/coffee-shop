@@ -10,6 +10,7 @@ class Header extends Component {
                 top='0'
                 height='70px'
                 justify_content='flex-start'
+                z_index='1'
             >
                 <HorizontalSeparator width='149px' />
                 <Navbar color='white' />
