@@ -6,7 +6,7 @@ import { WhiteButtonWithShadow } from '../styledComponents/buttons';
 import { BlackRegularText } from '../styledComponents/text';
 import { HorizontalSeparator } from '../styledComponents/block';
 
-const buttonsText = ['Brazil', 'Kenya', 'Columbia'];
+const buttonsText = ['All', 'Brazil', 'Kenya', 'Columbia'];
 
 class SearchFilterPanel extends Component {
     render() {
@@ -27,7 +27,7 @@ class SearchFilterPanel extends Component {
         });
 
         return (
-            <Block>
+            <Block width='110%'>
                 <Block>
                     <BlackRegularText font_size='14px'>Looking for</BlackRegularText>
                     <HorizontalSeparator width='19px' />

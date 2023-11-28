@@ -15,8 +15,16 @@ class OurCoffee extends Component {
     }
 
     onFilter = (filter) => {
+        if(filter === 'All'){
+            this.setState({visualData: productsData});
+            return;
+        }
         const currentVisualData = productsData.filter((productInfo) => productInfo.country === filter);
         this.setState({visualData: currentVisualData});
+    }
+
+    onSearch = () => {
+
     }
 
     render() {
