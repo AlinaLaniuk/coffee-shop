@@ -23,8 +23,12 @@ class OurCoffee extends Component {
         this.setState({visualData: currentVisualData});
     }
 
-    onSearch = () => {
-
+    onSearch = (value) => {
+        if(value === ''){
+            this.setState({visualData: productsData});
+        }
+        const dataFitSearch = this.state.visualData.filter((productInfo) => productInfo.name.indexOf(value) > -1);
+        this.setState({visualData: dataFitSearch});
     }
 
     render() {
@@ -36,7 +40,7 @@ class OurCoffee extends Component {
                     <AboutBlock text={text} header={header} imgSrc={imgSrc} imgAlt={imgAlt} />
                     <Line width='240px' color='black'/>
                     <VerticalSeparator height='60px'/>
-                    <SearchFilterPanel onFilter={this.onFilter}/>
+                    <SearchFilterPanel onSearch={this.onSearch} onFilter={this.onFilter}/>
                     <VerticalSeparator height='60px'/>
                     <CardsList cardsData={this.state.visualData} cardType={cardType}/>
                     <VerticalSeparator height='60px'/>
