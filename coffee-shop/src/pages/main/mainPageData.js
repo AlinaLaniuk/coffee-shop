@@ -9,11 +9,4 @@ export const aboutUsBlockContent = {
     imgAlt: '',
 };
 
-
-export const cardsData = [
-    { src: './cards-pictures/1.png', name: 'Solimo Coffee Beans 2 kg', price: 10.73, id: '1' },
-    { src: './cards-pictures/2.png', name: 'Presto Coffee Beans 1 kg', price: 15.99, id: '2' },
-    { src: './cards-pictures/3.png', name: 'AROMISTICO Coffee 1 kg', price: 6.99, id: '3' },
-];
-
 export const cardType = 'transparentBG';

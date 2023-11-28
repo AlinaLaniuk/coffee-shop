@@ -11,7 +11,7 @@ class CardsList extends Component {
     render() {
         const { cardType, cardsData } = this.props;
         const CurrentCardComponent = cardType === 'transparentBG' ? TransparentBGCard : WhiteBGShadowCard;
-        const cardsList = cardsData.map((cardData) => <CurrentCardComponent key={cardData.id} src={cardData.src} name={cardData.name} price={cardData.price} country={cardData.country}/>);
+        const cardsList = cardsData.map((cardData) => <CurrentCardComponent key={cardData.id} src={cardData.src} name={cardData.name} price={cardData.price} id={cardData.id} country={cardData.country}/>);
 
         return (
             <Block

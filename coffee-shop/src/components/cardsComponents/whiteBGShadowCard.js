@@ -5,7 +5,7 @@ import CardContent from './cardContent';
 
 class WhiteBGShadowCard extends Component {
     render() {
-        const {src, name, country, price} = this.props;
+        const {src, name, country, price, id} = this.props;
         return (
             <ColoredBlock
                 width='220px'
@@ -14,7 +14,7 @@ class WhiteBGShadowCard extends Component {
                 border_radius='8px'
                 box_shadow='12px 12px 20px 1px rgba(0, 0, 0, .2);'
             >
-                <CardContent src={src} name={name} country={country} price={price}/>
+                <CardContent src={src} name={name} country={country} price={price} id={id}/>
             </ColoredBlock>
         )
     }

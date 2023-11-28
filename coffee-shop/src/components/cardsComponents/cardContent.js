@@ -7,10 +7,12 @@ import { VerticalSeparator } from '../../styledComponents/block';
 
 class CardContent extends Component {
     render() {
-        const {src, name, country, price} = this.props;
+        const {src, name, country, price, id} = this.props;
         return (
             <Block
                 direction='column'
+                as='a'
+                href={`/product/${id}`}
             >
                 <VerticalSeparator height='7px' />
                 <Image src={src} />

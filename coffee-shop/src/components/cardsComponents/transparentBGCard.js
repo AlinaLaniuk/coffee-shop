@@ -5,7 +5,7 @@ import CardContent from './cardContent';
 
 class TransparentBGCard extends Component {
     render() {
-        const {src, name, country, price} = this.props;
+        const {src, name, country, price, id} = this.props;
         return (
             <ColoredBlock
                 width='220px'
@@ -13,7 +13,7 @@ class TransparentBGCard extends Component {
                 background_color='rgba(255, 255, 255, 0.5)'
                 border_radius='8px'
             >
-                <CardContent src={src} name={name} country={country} price={price}/>
+                <CardContent src={src} name={name} country={country} price={price} id={id}/>
             </ColoredBlock>
         )
     }

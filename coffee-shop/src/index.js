@@ -5,6 +5,7 @@ import App from './components/app';
 import Main from './pages/main/main';
 import OurCoffee from './pages/ourCoffee/ourCoffee';
 import ForYourPleasure from './pages/forYourPleasure.js/forYourPleasure';
+import ProductPage from './pages/productPage/productPage';
 import './index.css';
 
 import {
@@ -18,7 +19,7 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       {
-        path: "/",
+        index: true,
         element: <Main />,
       },
       {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
       {
         path: "/for-your-pleasure",
         element: <ForYourPleasure />,
+      },
+      {
+        path: "/product/:id",
+        element: <ProductPage />,
       },
     ],
   },

@@ -6,8 +6,8 @@ import SearchFilterPanel from '../../components/searchFilterPanel';
 import { Block, VerticalSeparator } from '../../styledComponents/block';
 import CardsList from '../../components/cardsComponents/cardsList';
 import Line from '../../components/common/line';
-import { heroImgSrc, heroText, aboutUsBlockContent, cardsData, cardType } from './ourCoffeePageData';
-
+import { heroImgSrc, heroText, aboutUsBlockContent, cardType } from './ourCoffeePageData';
+import { productsData } from '../productsData/productsData';
 class OurCoffee extends Component {
     render() {
         const { text, header, imgSrc, imgAlt } = aboutUsBlockContent;
@@ -20,7 +20,7 @@ class OurCoffee extends Component {
                     <VerticalSeparator height='60px'/>
                     <SearchFilterPanel />
                     <VerticalSeparator height='60px'/>
-                    <CardsList cardsData={cardsData} cardType={cardType}/>
+                    <CardsList cardsData={productsData} cardType={cardType}/>
                     <VerticalSeparator height='60px'/>
                 </Block>
             </>
