@@ -1,4 +1,6 @@
-export const heroImgSrc = 'bg/main.jpg';
+import bg from '../../resources/bg/main.jpg';
+
+export const heroImgSrc =  bg;
 
 export const heroText = 'Everything You Love About Coffee';
 

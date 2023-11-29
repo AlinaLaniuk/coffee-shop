@@ -4,10 +4,13 @@ import { NavbarLink } from '../../styledComponents/navbarLink';
 import { Block } from '../../styledComponents/block';
 import { Image } from '../../styledComponents/image';
 
+import blackBeansImg from '../../resources/icons/coffee-beans-empty-black.png';
+import whiteBeansImg from '../../resources/icons/coffee-beans-empty-white.png';
 class Navbar extends Component {
     render() {
+        const {color} = this.props;
         const links = [
-            { text: 'Coffee house', picture: `icons/coffee-beans-empty-${this.props.color}.png`, href: '/' },
+            { text: 'Coffee house', picture: color === 'black' ? blackBeansImg : whiteBeansImg, href: '/' },
             { text: 'Our coffee', href: '/our-coffee' },
             { text: 'For your pleasure', href: '/for-your-pleasure' }
         ];

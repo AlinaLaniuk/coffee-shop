@@ -8,6 +8,8 @@ import { HorizontalSeparator } from '../../styledComponents/block';
 import Beans from '../../components/common/beans';
 import { productsData } from '../productsData/productsData';
 
+import bg from '../../resources/bg/our-coffee.png';
+
 const getProductInfo = (id) => {
     return productsData.find((productInfo) => productInfo.id === id);
 }
@@ -23,12 +25,12 @@ const ProductPage = () => {
     const { name, src, imgAlt, country, description, price } = getProductInfo(id);
     return (
         <>
-            <Hero height='260px' text={heroText} imgSrc={`../${heroImgSrc}`} />
+            <Hero height='260px' text={heroText} imgSrc={bg} />
             <Block direction='column' width='60%'>
                 <Block
                     height='520px'
                 >
-                    <ImageBlock src={`../${src}`} alt={imgAlt} />
+                    <ImageBlock src={src} alt={imgAlt} />
                     <HorizontalSeparator width='50px' />
                     <Block width='auto' direction='column'>
                         <BlackRegularText font_size='24px'>{name}</BlackRegularText>

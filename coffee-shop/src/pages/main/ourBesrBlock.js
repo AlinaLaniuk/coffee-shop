@@ -7,6 +7,7 @@ import { Image } from '../../styledComponents/image';
 import { Block } from '../../styledComponents/block';
 import { BlackRegularText } from '../../styledComponents/text';
 
+import aboutBlockBG from '../../resources/bg/paper-bg.png';
 class OurBestBlock extends Component {
     render() {
         const { cardsData, cardType } = this.props;
@@ -18,7 +19,7 @@ class OurBestBlock extends Component {
                     top='0'
                     z_index='-1'
                 >
-                    <Image width='100%' src='./bg/paper-bg.png' />
+                    <Image width='100%' src={aboutBlockBG} />
                 </AbsoluteBlock>
                 <Block
                     direction='column'
